@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p id="texto">Esse paragrafo será escondido/revelado</p>
+    <button id="btn-toggle">Esconder</button>
+    
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () =>{
+        const p = document.getElementById("texto");
+        const btn = document.getElementById("btn-toggle");
+        btn.addEventListener("click", ()=> {
+            p.classList.toggle("hidden");
+            btn.textContent = p.classList.contains("hidden") ? "mostrar" : "Esconder"
+        })
+    })
+</script>
+</html>
